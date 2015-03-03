@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="{%= author_name %}" />
+		<meta name="keywords" content="{%= title %}" />
+		<meta name="description" content="{%= description %}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<title>{%= title || name %}</title>
+		<link href="statics/css/main.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="append">
+			<div id="loading">
+				<i id='circle'></i>
+				<span><i class='progress_len' id='progress_len'></i></span>
+			</div>
+		</div>
+		<div id="full-width-slider">
+			<div class="container container1">
+				
+			</div>
+			<div class="container container2">
+				
+			</div>
+			<div class="container container3">
+				
+			</div>
+		</div>
+		<script src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script src="sea-base/seajs/seajs/2.2.0/sea.js"></script>
+		<script>
+			// Set configuration
+			seajs.config({
+				base: "sea-base/",
+				alias: {
+					
+				}
+			});
+
+			// For development
+			if (location.href.indexOf("?dev") > 0) {
+				seajs.use("./sea-modules/main");
+			}
+			else {
+				seajs.use("./sea-modules/main");
+			}
+		</script>
+	</body>
+</html>
